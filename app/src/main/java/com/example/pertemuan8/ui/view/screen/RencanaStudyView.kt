@@ -14,6 +14,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Notifications
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -31,6 +32,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.pertemuan8.R
+import com.example.pertemuan8.data.MataKuilah
 import com.example.pertemuan8.model.Mahasiswa
 
 @Composable
@@ -97,6 +99,20 @@ fun RencanaStudyView(
                     .fillMaxSize()
                     .padding(16.dp)
             ) {
+                Text(text = "pilih mata kuliah peminatan", fontWeight = FontWeight.Bold)
+                Text(text = "silahkan pilih mata kuliah yang anda inginkan", fontSize = 12.sp, fontWeight = FontWeight.Light)
+                Spacer(modifier = Modifier.padding(8.dp))
+                DynamicSelectTextField(
+                    selectedValue = choosenDropdown,
+                    options = MataKuilah.options,
+                    label = "Mata Kuliah",
+                    onValueChangedEvent = {
+                        choosenDropdown = it
+                    }
+                )
+                Spacer(modifier = Modifier.padding(8.dp))
+                HorizontalDivider()
+
 
             }
         }
