@@ -1,7 +1,7 @@
 package com.example.pertemuan8.model
 
-class Mahasiswa {
+data class Mahasiswa(
     val nim: String = "",
     val nama: String = "",
-    val email: String = "",
-}
+    val email: String = ""
+)
