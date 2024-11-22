@@ -139,7 +139,14 @@ fun RencanaStudyView(
                     }
                 }
                 Spacer(modifier = Modifier.padding(8.dp))
+                HorizontalDivider()
+                Spacer(modifier = Modifier.padding(8.dp))
+                Text(text = "klausul persetujuan mahasiswa", fontWeight = FontWeight.Bold)
+                Row(
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
 
+                }
             }
         }
     }
