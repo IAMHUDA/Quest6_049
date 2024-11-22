@@ -148,8 +148,10 @@ fun RencanaStudyView(
                 ) {
                     Checkbox(
                         checked = checked,
-                        onCheckedChange = {checked = it}
+                        onCheckedChange = {checked = it},
+                        enabled = chosenDropdown.isNotBlank() && pilihankelas.isNotBlank()
                     )
+                    Text(text = "saya menyetujui pernyataan yang ada tanpa ada paksaan")
                 }
             }
         }
