@@ -17,6 +17,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
+import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -34,6 +35,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.pertemuan8.R
 import com.example.pertemuan8.data.MataKuilah
+import com.example.pertemuan8.data.RuangKelas
 import com.example.pertemuan8.model.Mahasiswa
 
 @Composable
@@ -123,7 +125,21 @@ fun RencanaStudyView(
                     modifier = Modifier
                         .fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceEvenly
-                ) {  }
+                ) {
+                    RuangKelas.kelas.forEach { data ->
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            RadioButton(
+                                selected = pilihankelas == data,
+                                onClick = {pilihankelas = data}
+                            )
+                            Text(data)
+                        }
+                    }
+                }
+                Spacer(modifier = Modifier.padding(8.dp))
+
             }
         }
     }
