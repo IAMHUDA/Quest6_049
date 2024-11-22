@@ -4,6 +4,6 @@ import com.example.pertemuan8.data.MataKuilah
 import com.example.pertemuan8.data.RuangKelas
 
 class RencanaStudy {
-    val namaMk: String = "",
+    val namaMK: String = "",
     val kelas: String = "",
 }
